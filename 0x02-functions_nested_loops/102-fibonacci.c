@@ -8,25 +8,24 @@
 
 int main(void)
 {
-	int i;
+	int counter = 2;
+	long int a = 1;
+	long int b = a + 1;
+	long int c = a + b;
 
-	/* initialize first and second terms */
-	int t1 = 1, t2 = 2;
-
-	/*  initialize the next term (3rd term) */
-	int nextTerm = t1 + t2;
-
-	/*  print the first two terms */
-	printf("%d, %d, ", t1, t2);
-
-	/* print 3rd to nth terms */
-	for (i = 3; i < 50; i++)
+	printf("%ld, %ld, ", a, b);
+	while (counter < 50)
 	{
-		printf("%d, ", nextTerm);
-		t1 = t2;
-		t2 = nextTerm;
-		nextTerm = t1 + t2;
+		printf("%ld", c);
+		counter++;
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 50)
+		{
+			printf(", ");
+		}
 	}
-
+	printf("\n");
 	return (0);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+#include "6-abs.c"
 
 /**
  * print_last_digit - function that prints the last digit of a number.
